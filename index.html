@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 DOORS PROBLEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/742dfea30d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,200;1,500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="light">
+    <Header>
+        <div class="header lightHeader" id="header">
+            <button class="theme-button tlight" id="theme-button"><i class="theme-icon fas fa-adjust"></i></button>
+            <div class="title">
+                <img src="img/door.png" class="title__door">
+                <h1 class="title__h1">THE DOORS GAME</h1>
+                <img src="img/door.png" class="title__door">
+            </div>
+        </div>
+    </Header>
+
+    <main>
+        <section class="operations">
+            <div class="sections">
+                <div>
+                    <button class="sections__button" id="add-button">Add Door</button>
+                    <br>
+                    <input class="sections__input" type="number" placeholder="Number of doors" id="add-input">
+                </div>
+                
+                <div>
+                    <button class="sections__button sections__button--restart" id="restart-button">Restart</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="added-doors" id="added-doors"></div>
+
+        <div class="error-message">
+            <i class="error-message__icon fas fa-exclamation-triangle"></i>
+            <p class="error-message__text">Please put less than 10 doors</p>
+        </div>
+
+        <div class="error-message2">
+            <i class="error-message2__icon fas fa-exclamation-triangle"></i>
+            <p class="error-message2__text">Please put more than 3 doors</p>
+        </div>
+
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>

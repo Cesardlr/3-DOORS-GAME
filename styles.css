@@ -1,0 +1,199 @@
+/* 17183B - Space Cadet */
+/* FFA630 - Yellow Orange */
+/* 3FA34D - Green Pigment */
+/* 3B5249 - Drak Slate Gray */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --blueGreen:#2e7e92;
+    --yellowOrange:#ffa630;
+    --greenPigment:#3fa34d;
+    --darkSlateGray:#3b5249;
+    --SpaceCadet:#17183b;
+}
+
+body{
+    font-family: 'Montserrat';
+    font-style: italic;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* THEMES */
+
+.light{
+    background:var(--blueGreen);
+    color: var(--yellowOrange);
+}
+
+.dark{
+    background: var(--SpaceCadet);
+}
+
+
+.header{
+    /* background: var(--darkSlateGray); */
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.lightHeader{
+    background: var(--greenPigment);
+    color: var(--darkSlateGray);
+}
+
+.darkHeader{
+    background:var(--darkSlateGray);
+    color: var(--yellowOrange);
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title__door{
+    width: 60px;
+    height: 103.3px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.title__h1{
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+/*  RECUERDA CAMBIAR EL DISEÑO DE LA PAGINA A UNA PAGINA DE NEON */
+
+.theme-button{
+    background: none;
+    border: 0px;
+    margin: 10px;
+    outline: none;
+    cursor: pointer;
+    transform: rotate(0deg);    
+}
+
+.theme-icon{
+    font-size: 20px;
+    background: white;
+    border-radius: 100%;
+    border:2px solid var(--greenPigment);
+}
+
+.sections{
+display: flex;
+justify-content:space-around;
+position:relative;
+top: 500px;
+padding: 20px;
+border-radius: 5px;
+}
+
+.sections__input{
+    margin-top:10px;
+    width: 200px;
+}
+
+
+
+.sections__button{
+    width: 200px;
+    margin-bottom: 10px;
+    /* background: #189fa3; */
+    background: linear-gradient(to bottom,#189fa3,  #53535e);
+    border: 1px solid #e2f6ff;
+    padding: 10px;
+    cursor:pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: 1s ease;
+}
+
+.sections__button:hover{
+    box-shadow: 10px 10px 14px 2px rgba(11, 206, 141, 0.473);
+}
+
+.sections__button--restart{
+    height: 80px;
+}
+
+.added-doors{
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+top: 50px; 
+flex-wrap: wrap;
+}
+
+.added-doors__img{
+    width: 87px;
+    height: 150px;
+    margin: 20px;
+    cursor:pointer;
+    animation-name: doors;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border: 0px solid transparent;
+}
+
+.error-message{
+    margin: 20px;
+    display: flex;
+    justify-content:start;
+    align-content: center;
+    visibility: hidden;
+}
+
+.error-message__text{
+    color: rgb(230, 6, 6);
+    font-family:'Montserrat';
+    font-style: italic;
+    font-size: 14px;
+    margin-left:8px ;
+}
+
+.error-message__icon{
+    color: rgb(230, 6, 6);;
+}
+
+.error-message2{
+    margin: 20px;
+    display: flex;
+    justify-content:start;
+    align-content: center;
+    visibility: hidden;
+}
+
+.error-message2__text{
+    color: rgb(230, 6, 6);
+    font-family:'Montserrat';
+    font-style: italic;
+    font-size: 14px;
+    margin-left:8px;
+}
+
+.error-message2__icon{
+    color: rgb(230, 6, 6);;
+}
+
+@keyframes doors{
+    from{
+        transform: scale(1)
+    }to{
+        transform: scale(1.1);
+    }
+}
+
