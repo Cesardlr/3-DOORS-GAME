@@ -16,29 +16,45 @@ let addData;
 
 // ----------------------AÑADIR LAS PUERTAS------------------------------
 
-addButton.addEventListener('click',function event() {
-    addData = addInput.value;
-    if (addData > 10) {
-        document.querySelector(".error-message").style.visibility = 'visible';
-            setInterval(() => {
-                document.querySelector(".error-message").style.visibility = 'hidden';
-            }, 3000);
+// addButton.addEventListener('click',function event() {
+//     addData = addInput.value;
+//     if (addData > 10) {
+//         document.querySelector(".error-message").style.visibility = 'visible';
+//             setInterval(() => {
+//                 document.querySelector(".error-message").style.visibility = 'hidden';
+//             }, 3000);
             
-        }else if (addData < 3) {
-            document.querySelector(".error-message2").style.visibility = 'visible';
-            setInterval(() => {
-                document.querySelector(".error-message2").style.visibility = 'hidden';
-            }, 3000);}
+//         }else if (addData < 3) {
+//             document.querySelector(".error-message2").style.visibility = 'visible';
+//             setInterval(() => {
+//                 document.querySelector(".error-message2").style.visibility = 'hidden';
+//             }, 3000);}
             
-            else{
-                for (let i = 0; i < addData; i++) {
-                    door = document.createElement("IMG")
-                    door.src = "img/door.png"
-                    door.className = 'added-doors__img'
-                    addedDoors.appendChild(door)
-                }
-                addButton.disabled = true
-                }})
+//             else{
+//                 for (let i = 0; i < addData; i++) {
+//                     door = document.createElement("IMG")
+//                     door.src = "img/door.png"
+//                     door.className = 'added-doors__img'
+//                     addedDoors.appendChild(door)
+//                 }
+//                 addButton.disabled = true
+//                 }})
+door = document.querySelector('.added-doors__img')
+door1 = document.getElementById('door1')
+door2 = document.getElementById('door2')
+door3 = document.getElementById('door3')
+changeMessage = document.querySelector(".changeDoor-message")
+
+door1.addEventListener('click',function () {
+        door2.src = 'img/open-door.png'
+        door1.style.border = '2px solid #fff'
+    setInterval(() => {
+        changeMessage.style.visibility = 'visible'
+    }, 1500);
+
+})
+
+
 
 // ---------------------RESTART BUTTON-------------------------------
             restartButton.addEventListener('click',function () {

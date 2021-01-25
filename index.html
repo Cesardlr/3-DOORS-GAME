@@ -23,7 +23,6 @@
     </Header>
 
     <main>
-        <section class="operations">
             <div class="sections">
                 <div>
                     <button class="sections__button" id="add-button">Add Door</button>
@@ -35,9 +34,23 @@
                     <button class="sections__button sections__button--restart" id="restart-button">Restart</button>
                 </div>
             </div>
-        </section>
 
-        <div class="added-doors" id="added-doors"></div>
+        <div class="added-doors" id="added-doors">
+            <div class="added-door"><img src="img/door.png" class="added-doors__img" id="door1"></div>
+            <div class="added-door"><img src="img/door.png" class="added-doors__img" id="door2"></div>
+            <div class="added-door"><img src="img/door.png" class="added-doors__img" id="door3"></div>
+        </div>
+
+        <div class="changeDoor-message">
+            <div class="changeDoor-message__text">
+                <p class="change-text">Do you want to change your door?</p>
+                <i class="fas fa-sync-alt"></i>
+            </div>
+<div class="changeButtons">
+    <button class="changeDoor-message__button"id="changeButton">CHANGE</button>
+    <button class="changeDoor-message__button"id="keepButton">KEEP IT</button>
+</div>
+        </div>
 
         <div class="error-message">
             <i class="error-message__icon fas fa-exclamation-triangle"></i>
