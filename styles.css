@@ -253,6 +253,7 @@ bottom: 150px;
 left: 500px;
 visibility:hidden;
 border-radius: 20px;
+z-index: 999;
 }
 
 .changeDoor-message__text{
@@ -270,22 +271,22 @@ border-radius: 20px;
 .changeButtons{
     text-align: center;
     margin: 20px;
+    z-index: 99;
 }
 
-.changeDoor-message__button{
+.button{
     background: linear-gradient(to bottom,#189fa3,  #53535e);
     border: 1px solid #e2f6ff;
     padding: 10px;
     cursor:pointer;
     font-size: 16px;
     border-radius: 3px;
-    transition: 1s ease;
     margin: 0px 10px 0px 10px;
 }
 
-.changeDoor-message__button:hover{
-    box-shadow: 10px 10px 14px 2px rgba(11, 206, 141, 0.473);
-}
+.button:hover{
+    transform: scale(1.05);
+} 
 
 .fa-sync-alt{
     color:#58b394;
